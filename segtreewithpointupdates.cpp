@@ -82,3 +82,15 @@ int main()
 	cout << res.ma << " " << res.mi << " " << res.cnt << endl;
 
 }
+
+
+/*
+sample input
+5
+1 2 -3 -4 5
+1 4
+2 -6
+sample output
+2 -4 4
+1 -6 3
+*/
