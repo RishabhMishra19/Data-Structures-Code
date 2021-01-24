@@ -41,7 +41,7 @@ node merge(node l, node r) {
 	return ret;
 }
 
-void build(int i = 1, int l = 0, int r = n) {
+void build(int i = 1, int l = 1, int r = n) {
 	if (l == r) {
 		seg[i] = *new node(a[l], a[l], a[l], 1);
 	}
@@ -52,7 +52,7 @@ void build(int i = 1, int l = 0, int r = n) {
 	}
 }
 
-node query(int ql, int qr, int i = 1, int l = 0, int r = n) {
+node query(int ql, int qr, int i = 1, int l = 1, int r = n) {
 	if (l > r || ql > r || qr < l) {
 		return *new node(INT_MAX, INT_MIN, 0, 0);
 	}
@@ -65,7 +65,7 @@ node query(int ql, int qr, int i = 1, int l = 0, int r = n) {
 	}
 }
 
-void update(int qi, int i = 1, int l = 0, int r = n) {
+void update(int qi, int i = 1, int l = 1, int r = n) {
 	if (i > r || i < l || l > r) {
 		return;
 	}
